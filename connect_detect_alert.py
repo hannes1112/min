@@ -15,10 +15,10 @@ def sound(x,z):
      play_obj = sa.play_buffer(audio, 1, 2, fs)
      play_obj.wait_done()
 
-intervall_var = input("gebe den verbindungsversuchs intervall an (in sek[int]): ")
+intervall_var = input("intervall (in sek[int]): ")
 
 sound(500,2)
-print("Test erfogreich")
+print("successful")
 i = 1
 
 while True:
@@ -33,11 +33,11 @@ while True:
           database="##")
         mycursor = mydb.cursor()
         
-        print("verbunden")
+        print("successfully connected")
         break
     
     except:
-        print(str(i) + "verbindung fehlgeschlagen, verbinde erneut in " + str(intervall_var) + "sekunden.")
+        print(str(i) + "failed, connect again in " + str(intervall_var) + "sek.")
         time.sleep(int(intervall_var))
 
 while True:
