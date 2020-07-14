@@ -24,7 +24,7 @@ i = 1
 while True:
     i += 1
     time_set = datetime.now()
-    print(str(time_set) + "------------------------")
+    print(str(time_set) + "-"*8)
     try:
         mydb = mysql.connector.connect(
           host="##",
